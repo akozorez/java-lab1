@@ -92,7 +92,7 @@ public class MatrixTest {
     @Test
     public void fileRead1() throws IOException {
         double[][] matrix1 = {{1,2},{3,4}};
-        double[][] matrix2 = Matrix.readFromFile(Paths.get("").toAbsolutePath().toString() + "\/src\/main\/resources\/input.txt");
+        double[][] matrix2 = Matrix.readFromFile(Paths.get("").toAbsolutePath().toString() + "/src/main/resources/input.txt");
         assertArrayEquals(matrix1, matrix2);
     }
     @Test(expected = NoSuchFileException.class)
