@@ -94,7 +94,7 @@ public class MatrixTest {
         assertArrayEquals(matrix1, matrix2);
 
     }
-    @Test(expected = IOException.class)
+    @Test(expected = NoSuchFileException.class)
     public void fileRead2() throws IOException {
         Matrix.readFromFile("C:\\321");
     }
