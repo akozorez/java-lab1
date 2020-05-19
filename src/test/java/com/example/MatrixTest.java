@@ -7,6 +7,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 
 import static org.junit.Assert.*;
 
@@ -91,9 +92,8 @@ public class MatrixTest {
     @Test
     public void fileRead1() throws IOException {
         double[][] matrix1 = {{1,2},{3,4}};
-        double[][] matrix2 = Matrix.readFromFile("C:\\Users\\kenshinn\\Desktop\\java-lab1\\src\\main\\resources\\input.txt");
+        double[][] matrix2 = Matrix.readFromFile(Paths.get("").toAbsolutePath().toString() + "\\src\\main\\resources\\input.txt");
         assertArrayEquals(matrix1, matrix2);
-
     }
     @Test(expected = NoSuchFileException.class)
     public void fileRead2() throws IOException {
